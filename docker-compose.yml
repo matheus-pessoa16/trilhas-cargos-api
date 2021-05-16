@@ -1,0 +1,31 @@
+version: '3.4'
+
+services:
+
+  main:
+    image: 'matheuspessoa/b2w-backend'
+    build:
+      context: .
+      network: host
+    restart: on-failure
+    depends_on:
+      - mysql-instance
+    ports:
+      - 8080:8080
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:mysql://mysql-instance:3306/b2w
+      - SPRING_DATASOURCE_USERNAME=b2w
+      - SPRING_DATASOURCE_PASSWORD=teste123
+      - SPRING_JPA_HIBERNATE_DDL_AUTO=update
+
+  mysql-instance:
+    image: mysql:latest
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=b2w
+      - MYSQL_USER=b2w
+      - MYSQL_PASSWORD=teste123
+    ports:
+      - 3306:3306
+
+  
