@@ -42,9 +42,19 @@ docker exec -i b2w_mysql-instance_1 mysql -uroot -proot b2w < bkp.sql
 Após inicializada e com o banco restaurado, a aplicação possui um Swagger rodando em
 
 ```bash
-http://localhost:8080/swagger-ui
+http://localhost:8080/swagger-ui/
 ```
 É possível testar as funcionalidades das APIs através da interface gráfica ou usando chamadas via Postman.
+
+## Melhorias
+
+Algumas melhorias a serem feitas:
+
+* Configuração do TravisCI para integração contínua
+* Deploy automático (CD) no Heroku
+* Métricas de desempenho com ELK Stack
+* Fazer testes de integração do BD
+* Aumentar o número de testes unitários
 
 
 ## License
