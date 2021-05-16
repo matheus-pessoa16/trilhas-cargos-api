@@ -2,7 +2,11 @@ language: java
 jdk:
 - openjdk11
 dist: trusty
+services:
+- mysql
 before_install:
 - chmod +x mvnw
+- sudo mysql -e 'CREATE DATABASE b2w;'
+- sudo mysql -uroot -p b2w < bkp.sql
 after_success:
 - bash <(curl -s https://codecov.io/bash)
