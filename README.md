@@ -46,6 +46,10 @@ http://localhost:8080/swagger-ui/
 ```
 É possível testar as funcionalidades das APIs através da interface gráfica ou usando chamadas via Postman.
 
+
+## Extras
+
+Caso deseje visualizar métricas de desempenho da aplicação, esse projeto está configurado para acessar um dashboard usando o Springboot Admin. Para usar o painel, clone e execute o projeto [nesse repositório](https://github.com/matheus-pessoa16/spring-admin-dashboard).
 ## Melhorias
 
 Algumas melhorias a serem feitas:
