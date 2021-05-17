@@ -31,11 +31,11 @@ docker-compose logs
 
 Após a inicialização completa da aplicação, use o comando abaixo para restaurar a base de dados disponibilizada.
 ```bash
-docker exec -i b2w_mysql-instance_1 mysql -uroot -proot b2w < bkp.sql
+docker exec -i trilhas-cargos-api_mysql-instance_1 mysql -uroot -proot b2w < bkp.sql
 ```
 
 * O arquivo bkp.sql é o nome do arquivo de restauração disponibilizado. 
-* b2w_mysql-instance_1 é o nome do container do MySQL. Pode ser verificado executando ```docker ps``` no terminal. Caso o nome seja diferente, b2w_mysql-instance_1 pelo nome da sua instância.
+* trilhas-cargos-api_mysql-instance_1 é o nome do container do MySQL. Pode ser verificado executando ```docker ps``` no terminal. Caso o nome seja diferente, b2w_mysql-instance_1 pelo nome da sua instância.
 
 ## Uso
 
