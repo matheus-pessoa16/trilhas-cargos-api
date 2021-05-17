@@ -21,7 +21,7 @@ mvn clean package -DskipTests
 ```
 Após a geração do arquivo, execute o comando
 ```bash
-docker-compose up
+docker-compose up -d
 ```
 
 O container do banco MySQL demora alguns minutos para estar disponível, portanto, a aplicação java irá reiniciar algumas vezes até obter uma conexão. É possível monitorar o andamento do processo com o comando
@@ -46,17 +46,13 @@ http://localhost:8080/swagger-ui/
 ```
 É possível testar as funcionalidades das APIs através da interface gráfica ou usando chamadas via Postman.
 
-
-## Extras
-
-Caso deseje visualizar métricas de desempenho da aplicação, esse projeto está configurado para acessar um dashboard usando o Springboot Admin. Para usar o painel, clone e execute o projeto [nesse repositório](https://github.com/matheus-pessoa16/spring-admin-dashboard).
 ## Melhorias
 
 Algumas melhorias a serem feitas:
 
 * Configuração do TravisCI para integração contínua
 * Deploy automático (CD) no Heroku
-* Métricas de desempenho com ELK Stack
+* Métricas de desempenho com Springboot Admin Dashboard
 * Fazer testes de integração do BD
 * Aumentar o número de testes unitários
 
